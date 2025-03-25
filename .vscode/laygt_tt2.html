@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lay gtri thuoc tinh</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var x= $("img").attr("src");
+                // alert(x);
+                $(".img2").attr("src", x)
+            })
+        })
+    </script>
+
+    <button>click</button>
+    <img class="img1" src="anhtai.jpeg" alt="anh8">
+    <img class="img2" src="anhbay.jpeg" alt="anh7"> -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        $("img").click(function () {
+          var x = $(this).attr("src");
+          alert(x);
+        });
+      });
+    </script>
+
+    <img src="anhbay.jpeg" alt="" width="200px" height="200" />
+    <img src="anhtai.jpeg" alt="" width="200px" height="200" />
+    <img src="anhzil.jpeg" alt="" width="200px" height="200" />
+    <img src="anhkvin.jpeg" alt="" width="200px" height="200" /> -->
+
+    <div class="main">
+      <img
+        class="img1"
+        src="anhbay.jpeg"
+        alt=""
+        
+        style="display: block; width: 1100px; height: 800px"
+      />
+      <img class="img2" src="anhtai.jpeg" />
+      <img class="img2" src="anhzil.jpeg" />
+      <img class="img2" src="anhkvin.jpeg" />
+      <img class="img2" src="anhsi.jpeg" />
+      <img class="img2" src="anhbuno.jpeg" />
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".img2").click(function () {
+          var x = $(this).attr("src");
+          $(".img1").attr("src", x);
+        });
+      });
+    </script>
+    <style>
+      .main {
+        width: 1100px;
+        margin: 0 auto;
+      }
+      .img2 {
+        margin-top: 20px;
+        width: 200px;
+        margin-right: 20px;
+        height: 200px;
+      }
+      .img2:last-child {
+        margin-right: 0;
+      }
+    </style>
+  </body>
+</html>

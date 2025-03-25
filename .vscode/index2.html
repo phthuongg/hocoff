@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>index2</title>
+</head>
+<body>
+
+  <!-- javascript: ngôn ngữ xu ly trên màn hinh (frontend) -->
+  <script type="text/javascript">
+    
+
+    function demo(a,b, c){
+      if(c==true){
+        tinhNhan(a,b)
+      }else{
+
+        // goi hàm trong hàm
+        tinhTong(a,b)
+        
+      }
+      
+    }
+
+    // chia nhỏ hàm ra
+    function tinhTong(a,b) {
+        tong = a + b;
+        alert(tong)
+    }
+    function tinhNhan(a,b) {
+        tong = a * b;
+        alert(tong)
+    }
+
+    // công thuc tạo sẵn
+    function sum(a,b) {
+      
+      s= 0
+      for (var i = a; i <=b; i++) {
+        s +=i;
+      }
+
+      alert(s)
+    }
+
+    // sự kiện (event): là hành động tác động vào the html
+
+
+
+
+
+  </script>
+  
+  <h1>viet 1 sự kiện onclick(click vao the button) thì hàm demo dc goi</h1>
+  <button onclick="demo(3,4, false)">tinh tong</button>
+
+  <button onclick="demo(3,4,true)">tinh nhan</button>
+
+  <button onclick="sum(1,10)">tinh sum tu 1-10</button>
+  <button onclick="sum(20,30)">tinh sum tu 20-30</button>
+  
+
+</body>
+</html>

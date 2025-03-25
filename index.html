@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <style type="text/css">
+      .demo {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <script type="text/javascript">
+        function demo(a, b, c){
+            if(c==true){
+                tinhNhan(a,b)
+            }else{
+                tinhTong(a,b)
+            }
+        }
+        function tinhTong(a, b){
+            tong =a+b;
+            alert(tong)
+        }
+        function tinhNhan(a,b){
+            nhan = a*b;
+            alert(nhan)
+        }
+        function sum(a,b){
+            s=0;
+            for (let i = a; i <= b; i++) {
+                s+= i;              
+            }
+            alert(s);
+        }
+
+
+    </script>
+
+<div style="display: flex; justify-content: space-around; width: 100%; padding: 20px;">
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="demo(3,4,false)">tinhTong</button>
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="demo(3,4,true)">tinh nhan</button>
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="tinhTong(10,5)">tinh tong r</button>
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="tinhNhan(6,6)">tinh nhan r</button>
+
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="sum(1,10)">tinh sum 1 - 10</button>
+    <button style="background-color: blue; color: white; padding: 10px; border-radius: 5px;" onclick="sum(10,20)">tinh sum 10 - 20</button>
+</div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.xx").click(function () {
+          // $("h1").hide();
+          $("h1").addClass("demo");
+        });
+        $("button#yy").click(function () {
+          // $("h1").show()
+          // $("h1").removeClass("demo");
+
+          // hasClass: kiem tra 1 class co trong the html k ?
+          // - neu co tra ve true, - k co tra ve false
+
+          var check = $("h1").hasClass("demo");
+          // alert(check);
+          if (check == true) {
+            $("h1").removeClass("demo");
+          } else {
+            $("h1").addClass("demo");
+          }
+        });
+      });
+    </script>
+
+    <h1>học 1 số hàm cơ bản của jquery</h1>
+    <button class="xx">them</button>
+
+    <button id="yy">xoa</button>
+  </body>
+</html>

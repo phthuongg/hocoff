@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    .demo{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+           
+              // var x =  $("a").attr("id") 
+             // var x =  $("img").attr("src")
+             // alert(x)
+
+            //   $("a").attr("href", "index2.php")
+              // $("a").attr("class", "demo")
+
+
+              // var y = "https://icdn.24h.com.vn/upload/1-2025/images/2025-03-05//gettyimages-2202722840-612x612-495-1741121060-464-width740height495.jpg";
+
+              // $("img").attr("src", y)
+          })
+          // -------------
+
+
+          $("li").click(function(){
+            // this: chinh la the dang click vao
+            $("div").addClass("demo")
+          })
+         
+
+        })
+    </script>
+
+    
+
+    hàm attr:
+    
+    - lấy gia tri thuoc tinh
+    
+
+    <!-- cong thuc:  $("ten the html").attr("thuoc tinh can lay") -->
+
+
+    - thêm hoặc thay đôi gia tri thuoc tinh
+
+    <!-- cong thuc:  $(ten the html).attr("ten thuoc tinh", "gia tri moi") -->
+
+
+
+
+    thuộc tinh: href, class, src, id
+    gia tri: bên trong thuoc tính (index.php, xx, images.png)
+
+    <a href="index.php" class="active" id="1232"></a>
+
+    <img src="https://cdn.24h.com.vn/upload/4-2024/images/2024-11-13//adt1731491622-1-61537-82-0-864-1251-crop-14794__anh_cat_3_2.jpeg">
+
+    <button>click</button>
+
+
+
+    <ul>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+
+</body>
+</html>
+
+<!-- tao button va 2 the img
+vie tham click butotn:
+lây src cua img1 ra
+gán vào src cua img2 -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danh sách</title>
+    <style type="text/css">
+      .active {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("li").click(function () {
+          $(this).toggleClass("active");
+        });
+      });
+    </script>
+
+    <ul>
+      <li class="item1">Mục 1</li>
+      <li class="item2">Mục 2</li>
+      <li id="item3">Mục 3</li>
+      <li id="item4">Mục 4</li>
+    </ul>
+  </body>
+</html>

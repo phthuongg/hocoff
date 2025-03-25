@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index4</title>
+    <style type="text/css">
+      .ACTIVE {
+        background-color: red;
+      }
+
+      .demo {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script>
+      $(document).ready(function () {
+        $("span").click(function () {
+          var check = $("span").hasClass("ACTIVE");
+          if (check == true) {
+            $("span").removeClass("ACTIVE");
+          } else {
+            $("span").addClass("ACTIVE");
+          }
+        // $(this).toggleClass("ACTIVE"); c2
+        });
+      });
+    </script>  -->
+
+    <!-- <script>
+            $(document).ready(function(){
+                $("span").click(function(){
+                    var check = $("span").hasClass("ACTIVE");
+                    if(check == true){
+                        $("span").removeClass("ACTIVE");
+                        $("p").show();
+                    }
+                    else {
+                        $("span").addClass("ACTIVE");
+                        $("p").hide();
+                    }
+                })
+            })
+        </script>
+    <span> Day la the span <br> <p>doan p trong span</p> </span>
+     -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        $("li").click(function () {
+          var check = $(this).hasClass("demo");
+          if (check == true) {
+            $(this).removeClass("demo");
+          } else {
+            $(this).addClass("demo");
+          }
+        });
+       
+      });
+    </script>
+
+    <ul>
+      <li id="xanh">xanh</li>
+      <li id="do">do</li>
+      <li id="tim">tim</li>
+      <li id="vang">vang</li>
+    </ul> -->
+
+    <!-- - tao 1 button va the p 
+  viet ham click vao button : 
+  - lan 1 thi hide the p 
+  - lan 2 thi show p 
+  - lan 3 -> hide p 
+... -->
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var check = $(this).hasClass("text");
+          if (check == true) {
+            $(this).removeClass("text");
+            $("p").show();
+          } else {
+            $(this).addClass("text");
+            $("p").hide();
+          }
+        });
+      });
+    </script>
+
+    <button>click</button>
+    <p>day la the p</p>
+  </body>
+</html>

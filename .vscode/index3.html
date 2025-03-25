@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>index3</title>
+    <style type="text/css">
+      .demo {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jquery( nâng cao cua javascript, viet code gon hơn) -->
+
+    <!-- thư viện cua nó, -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // cong thuc: $(ten the html).ten-ham()
+
+        // click vao the button co classs xx
+        $("button.xx").click(function () {
+          // $("h1").hide();
+
+          // addClass: thêm 1 class vao the html
+          $("h1").addClass("demo");
+        });
+
+        // click vao the button có id=yy
+        $("button#yy").click(function () {
+          // $("h1").show();
+
+          // $("h1").removeClass("demo")
+
+          // hasClass: kiem tra 1 class co trong the html k?
+          // - nêu co thi tra ve true
+          // - k co thi tra ve false
+
+          // kiem tra the h1 co class DEMO k?
+          var check = $("h1").hasClass("demo");
+          // alert(check)
+          if (check == true) {
+            $("h1").removeClass("demo");
+          } else {
+            $("h1").addClass("demo");
+          }
+        });
+      });
+    </script>
+
+    <h1>học 1 số hàm cơ bản của jquery</h1>
+    <button class="xx">them</button>
+
+    <button id="yy">xoa</button>
+  </body>
+</html>
