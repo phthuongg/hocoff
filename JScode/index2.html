@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var a=500;
+        var b=15;
+        var c= a+b;
+
+        console.log(c);
+
+        var fullname = "nguyen phuoc thuong";
+        console.log(fullname);
+    </script> -->
+    <!-- <script>
+        var age =16;
+        var kq= age >= 18 ? "du tuoi mua ruou" : "ch du mua ruou";
+        console.log(kq);
+    </script> -->
+    <!-- <script>
+        var a = 2;
+        switch (a) {
+            case 1:
+                console.log("day la gia trij 1");
+                break;
+            case 1:
+                console.log("day la gia trij 1");
+                break;
+            case 2:
+                console.log("day la gia trij 2");
+                break;
+            default:
+                console.log("khong xac dinh")
+                break;
+        }
+    </script> -->
+    <!-- <script>
+        for( i=0 ; i<10 ; i++){
+            console.log("so: ",i);
+        }
+    </script> -->
+    <!-- <script>
+        var infouser = {
+            fullname: "nguyen phuoc thuong",
+            age: 18,
+            email: "thuonggamail",
+            phone: "1039383993",
+        };
+
+        var keytext = "phone";
+
+        console.log(infouser.email);
+        console.log(infouser[keytext]);
+
+        for (key in infouser) {
+            console.log(key, infouser[key]);
+        }
+    </script> -->
+    <form action="">
+        <div class="row">
+            <div class="col-xl-6">
+                <input type="text" placeholder="Full name">
+            </div>
+            <div class="col-xl-6">
+                <input type="text" placeholder="email address">
+            </div>
+            <div class="col-xl-12">
+                <textarea placeholder="your message"></textarea>
+            </div>
+            <div class="col-xl-12">
+                <button class="button-one">senmessage</button>
+            </div>
+        </div>
+    </form>
+    <style>
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f6f6fb;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .col-xl-6 {
+            /* flex: 1; */
+            width: 48%;
+        }
+
+        .col-xl-12 {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: none;
+        }
+
+        .button-one {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            background: linear-gradient(135deg, #6e46ff, #ff6be6);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+
+</html>

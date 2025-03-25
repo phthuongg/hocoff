@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button class="demo">click</button>
+    <p id="demo">click on this paragraph</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {     //dòng này để chạy code trong html đã được viết
+            $("button").click(function () {     //khi click vào button thì thực hiện chức năng nào đó
+                var getClass = $(this).attr("class");   // *this == button : khai báo biên getClass và gán dữ liệu trong class cho nó (demo) *class nằm trong button
+                $("p#" + getClass).addClass("active");  //  thêm class active vào thẻ p. tên của thẻ p ban đầu là p#demo đổi tên lại = chuỗi + getClass và có thêm class active. 
+            })
+        })
+    </script> -->
+
+
+    <style type="text/css">
+        .hide {
+          display: none;
+        }
+        .show {
+          display: block;
+        }
+        
+        ul li {
+          display: inline-block;
+          margin: 0 10px;
+          background-color: red;
+        }
+        .active {
+            background-color: darkred; /* Màu khi được chọn */
+        } 
+      </style>
+      <div class="demo">
+        <ul>
+          <li class="tintuc" >tin tuc</li>
+          <li class="bongda" >bong da</li>
+          <li class="thoitrang" >thoi trang</li>
+        </ul>
+    
+        <div class="content">
+          <div class="hinh show" id="tintuc">
+            <img src="hinhatt.jpg" >
+          </div>
+          <div class="hinh hide"  id="bongda">
+            <img src="hinhabongda.jpg">
+          </div>
+          <div class="hinh hide"  id="thoitrang">
+            <img src="hinhttrang.jpg">
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $("li").click(function(){
+            // $("li").removeClass("active");
+            // $(this).addClass("active");
+            var x = $(this).attr("class");
+            // alert(x);
+            $(".hinh").removeClass("show").addClass("hide");
+            $("#" + x).removeClass("hide").addClass("show");
+          })
+        })
+      </script>
+</body>
+
+</html>
