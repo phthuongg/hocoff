@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(){
+                var getValue1 = $("input#hoten").val();
+                var getValue2 = $("input#email").val();
+                var getValue3 = $("input#sdt").val();
+                var getValue4 = $("input#diachi").val();
+                var getValue5 = $("input#noidung").val();
+
+                if(getValue1 == ""){
+                    $("p.err1").text("vui long nhap");
+                }else{
+                    $("p.err1").text("");
+                }
+
+                if(getValue2 == ""){
+                    $("p.err2").text("vui long nhap");
+                }else{
+                    $("p.err2").text("");
+                }
+                if(getValue3 == ""){
+                    $("p.err3").text("vui long nhap");
+                }else{
+                    $("p.err3").text("");
+                }
+                if(getValue4 == ""){
+                    $("p.err4").text("vui long nhap");
+                }else{
+                    $("p.err4").text("");
+                }
+                if(getValue5 == ""){
+                    $("p.err6").text("vui long nhap");
+                }else{
+                    $("p.err6").text("");
+                }
+
+                if(getValue1 != "" && getValue2 != "" && getValue3 != "" && getValue4 != "" && getValue5 != "" && getValue6 != ""){
+                    alert("oke");
+                    return true;
+                }else
+                return false;
+            })
+        })
+    </script>
+    <div style="width: 1100px; margin: 0 auto;">
+        <h1 style="text-align: center; background-color: green; padding: 10px;">GÓP Ý - LIÊN HỆ VỚI 24H</h1>
+        <form action="https://www.24h.com.vn/tin-tuc-trong-ngay-c46.html?" style=" border: solid 5px green;">
+            <label for="hoten" class="l1">Họ và tên</label>
+            <input type="text" name="hoten" id="hoten"><br>
+            <p class="err1"></p>
+
+            <label for="email" class="l1">Địa chỉ email</label>
+            <input type="email" name="email" id="email"><br>
+            <p class="err2"></p>
+
+            <label for="sdt" class="l1">Số điện thoại</label>
+            <input type="text" name="sdt" id="sdt"><br>
+            <p class="err3"></p>
+
+            <label for="diachi" class="l1">Địa chỉ nơi cư trú</label>
+            <input type="text" name="diachi" id="diachi"><br>
+            <p class="err4"></p>
+
+            <label for="tieude" class="l1">Tiêu đề</label>
+            <input type="text" name="tieude" id="tieude" value="Góp ý 24h"><br>
+            <p class="err5"></p>
+
+            <label for="noidung" style="display: flex; align-items: center; gap: 10px;" class="l1">
+                Nội dung
+                <textarea name="noidung" id="noidung" rows="5" ></textarea>
+            </label>
+            <p class="err6"></p>
+            <div class="l2">
+                <button type="submit" class="btgui" style="padding: 5px;">GỬI</button>
+                <button type="button" onclick="window.close()" class="btthoat" style="padding: 5px;">Thoát</button>
+             </div>
+        </form>
+        <style>
+            .l1{
+                padding: 0 40px;
+                font-size: 20px;
+            }
+            .l2{
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                padding-bottom: 20px;
+                font-size: 20px;
+            }
+            h1 {
+                margin-bottom: 0; /* Xóa khoảng cách phía dưới h1 */
+            }
+            p{
+                background-color: red;
+                width: 50%;
+            }
+            
+        </style>
+    </div>
+</body>
+</html>

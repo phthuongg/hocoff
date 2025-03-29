@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteBooking - Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            width: 1100px;
+            height: 100vh;
+            margin: 0 auto;
+        }
+        .left-panel {
+            flex: 50%;
+            background: url(dl1.avif) no-repeat center center/cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 115px;
+            border-radius: 10px;
+        }
+        .blue { color: #007bff; }
+        .gray { color: #555; }
+        .right-panel {
+            flex: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background: #fff;
+            padding: 40px;
+        }
+        form {
+            width: 100%;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 20px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 20px 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px
+        }
+        .btn-1 {
+            flex: 1;
+            padding: 10px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #ddd;
+        }
+        a { text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="overlay">
+                <h1><span class="blue">Elite</span><span class="gray">Booking</span></h1>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2>Create Account</h2>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+                
+                <label>Email</label>
+                <input type="email" placeholder="name@gmail.com" required>
+                
+                <label>Phone No</label>
+                <input type="text" placeholder="With Country Code" required>
+                
+                <label>Country</label>
+                <input type="text" placeholder="Country Name" required>
+                
+                <label>Username</label>
+                <input type="text" placeholder="Username" required>
+                
+                <label>Password</label>
+                <input type="password" placeholder="6+ characters" required>
+                
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+            <p>By signing up you agree to <a href="">terms and conditions</a> at Zoho.</p>
+            <div class="social-login">
+                <button class="btn-1">Facebook</button>
+                <button class="btn-1">Google</button>
+            </div>
+            <p><a href="">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

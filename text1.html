@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        p{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // - cho action dung lai
+            // - kiem tra the input da dc nhap chưa?
+            //     + neu chưa nhap thi bao loi
+            //     + neu nhập thi cho action chay
+
+            // submit: chi dung cho form
+            $("form").submit(function(){
+
+                // lấy gia tri nhap vao the input
+                var getValue1 = $("input.email").val()
+                var getValue2 = $("input#pass").val()
+                // alert(getValue)
+
+                if(getValue1 == ""){
+
+                    // text: gán đoạn text vao the p 
+                    $("p.err1").text("vui long nhap e")
+                }else{
+                    $("p.err1").text("")
+                }
+
+
+                if(getValue2 == ""){
+
+                    // text: gán đoạn text vao the p 
+                    $("p.err2").text("vui long nhap p")
+                }else{
+                    $("p.err2").text("")
+                }
+
+                // neu ca 2 the nhap roi thi cho chạy
+                if(getValue1 != "" && getValue2 != ""){
+                    alert("ok")
+                    return true;
+                }
+
+                return false;
+            })
+        })
+    </script>
+
+    <h1>XU LY form</h1>
+
+    <form action="https://www.24h.com.vn/">
+        <input type="text" name="" value="" class="email">
+        <p class="err1"></p>
+
+        <input type="text" name="" value="" id="pass">
+        <p class="err2"></p>
+
+        <button type="submit">click</button>
+    </form>
+
+</body>
+</html>
