@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>responsive</title>
+  </head>
+
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .main {
+        max-width: 1100px;
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+      .main_table {
+        width: 69%;
+        /* width: 100%; */
+        display: inline-block;
+        float: right;
+        margin-left: 1%;
+      }
+
+      .main_table ul {
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+
+      .main_table ul li {
+        display: inline-block;
+        width: 33%;
+        float: right;
+        margin-left: 3%;
+        margin-bottom: 20px;
+      }
+
+      .main_table ul li:first-child {
+        display: inline-block;
+        width: 64%;
+        float: left;
+        margin-left: 0;
+        font-size: 32px;
+      }
+
+      .main_table ul li img {
+        width: 100%;
+        padding-bottom: 10px;
+      }
+
+      .main_table ul li h4 {
+        font-size: 20px;
+      }
+
+      .main_table ul li p {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .main_list {
+        /* background-color: yellow; */
+        width: 30%;
+        /* width: 100%; */
+        display: inline-block;
+      }
+
+      .main_list ul {
+        width: 100%;
+        display: block;
+      }
+
+      .main_list ul li {
+        width: 100%;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid gray;
+      }
+
+      .main_list ul li:first-child {
+        padding-top: 0;
+      }
+
+      .main_list ul li:last-child {
+        border-bottom: none;
+      }
+
+      .main_list ul li img {
+        float: left;
+        width: 120px;
+        height: auto;
+      }
+
+      .main_list ul li p {
+        width: 180px;
+        float: right;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        /* .container{
+                width: 100%;
+            }
+            .main{
+                width: 100%;
+            } */
+        .main_table {
+          width: 60%;
+          margin-left: 0;
+          float: left;
+        }
+        .list_r {
+          width: 100%;
+        }
+        ul.list_r li {
+          width: 49%;
+          margin-left: 2%;
+        }
+        .main_list {
+          width: 38%;
+          float: right;
+          margin-left: 2%;
+        }
+        ul.list_r li:first-child {
+          display: block;
+          width: 100%;
+          float: none;
+        }
+        ul.list_r li:last-child {
+          margin-left: 0;
+        }
+        .main_list ul li img {
+          width: 40%;
+        }
+        .main_list ul li p {
+          width: 58%;
+          padding-left: 2px;
+        }
+      }
+      @media only screen and (max-width: 730px) {
+        .main_table {
+          width: 100%;
+        }
+        .main_list {
+          width: 100%;
+        }
+        .list_r li {
+          width: 100%;
+          display: inline-block;
+        }
+        .main_list ul li img {
+          width: 30%;
+          /* width: 210px; */
+        }
+        .main_list ul li p {
+          width: 70%;
+          padding-left: 10px;
+          box-sizing: border-box;
+        }
+
+        .main_list ul li:first-child {
+          padding-top: 20px;
+          border-top: 1px solid gray;
+        }
+      }
+
+      /*------------------ begin table_section*/
+
+      .table_section {
+        display: block;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .header_se {
+        max-width: 1100px;
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid rgb(220, 216, 216);
+      }
+      .header_se h3 {
+        width: 100%;
+        display: block;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      .title_s {
+        display: inline-block;
+      }
+      .tt_main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+      .tt_main li {
+        display: inline-block;
+        width: 18.5%;
+        border-radius: 5px;
+        border: 1px solid rgb(188, 184, 184);
+        /* box-sizing: border-box; */
+      }
+      .tt_main li img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .tt_main li p {
+        width: 90%;
+      }
+      @media only screen and (max-width: 1023px) {
+        /* .header_se{
+            width: 100%;
+            display: inline-block;
+        } */
+        .header_se h3 {
+          width: 100%;
+          display: inline-block;
+          margin-top: 20px;
+        }
+        .tt_main {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          gap: 15px;
+        }
+        .tt_main li:nth-child(1),
+        .tt_main li:nth-child(2),
+        .tt_main li:nth-child(3) {
+          width: 100%;
+        }
+        .tt_main li:nth-child(4),
+        .tt_main li:nth-child(5) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 666px) {
+        .header_se h3 {
+          width: 100%;
+          display: inline-block;
+          margin-top: 20px;
+        }
+        .tt_main {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          gap: 15px;
+        }
+        .tt_main li:nth-child(3) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 479px) {
+        .header_se h3 {
+          width: 100%;
+          display: inline-block;
+          margin-top: 20px;
+        }
+        .tt_main {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          gap: 15px;
+        }
+        .tt_main li:nth-child(1) {
+          width: 100%;
+        }
+        .tt_main li:nth-child(2) {
+          display: none;
+        }
+      }
+
+      /*----------end table_section*/
+
+      .table3 {
+        max-width: 1100px;
+        width: 100%;
+        /* width: 1100px; */
+        padding: 30px;
+        background-color: yellow;
+        display: block;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .table3 h3 {
+        display: inline-block;
+        float: left;
+      }
+
+      .tb3_mu {
+        display: flex;
+        gap: 30px;
+      }
+      .tb3_mu li {
+        font-weight: bold;
+      }
+      .tb3_mu li:first-child {
+        margin-left: 20px;
+      }
+      .ct_mul {
+        width: 100%;
+        display: inline-block;
+        margin-top: 15px;
+      }
+      .ct_mul ul {
+        width: 100%;
+        display: inline-block;
+      }
+      .ct_mul ul li {
+        width: 24%;
+        float: left;
+        margin-left: 1.5%;
+      }
+      .ct_mul ul li:first-child {
+        width: 49%;
+        margin-left: 0;
+      }
+
+      .ct_mul ul li img {
+        width: 100%;
+      }
+      .ct_mul ul li h3 {
+        width: 94%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ct_mul ul li:nth-child(2),
+      .ct_mul ul li:nth-child(3) {
+        margin-bottom: 10px;
+      }
+      .ct_mul ul li p {
+        width: 100%;
+        display: inline-block;
+      }
+
+      /* 0-1023: tablet */
+      @media only screen and (max-width: 1023px) {
+        .tb3_mu {
+          display: none;
+        }
+        .ct_mul ul li {
+          width: 49%;
+          margin-left: 0;
+          /* height: 380px; */
+        }
+        .ct_mul ul li:first-child {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+        .ct_mul ul li:nth-child(3),
+        .ct_mul ul li:nth-child(5) {
+          margin-left: 2%;
+        }
+      }
+
+      /*----------- begin content3 */
+      .content3 {
+        display: block;
+        width: 1100px;
+      }
+      .new_table {
+        width: 100%;
+      }
+      .table_main {
+        width: 100%;
+        display: inline-block;
+      }
+      .table_main li {
+        width: 24%;
+        float: left;
+        margin-left: 1%;
+      }
+      .tt_main li:first-child .table_main li h2 {
+        width: 100%;
+      }
+      .table_main li img {
+        width: 100%;
+      }
+      .table_main li p {
+        width: 100%;
+      }
+      .ct_new1 {
+        display: inline-block;
+      }
+      .ct_new1 img {
+        width: 105px;
+        float: left;
+      }
+      .ct_new1 h3 {
+        float: right;
+      }
+
+      /*----------------- begin content4 */
+      .content_4 {
+        /* max-width: 1100px; */
+        /* width: 100%; */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 2px solid gray;
+      }
+
+      .ct_content {
+        /* width: 100%; */
+        max-width: 1100px;
+        width: 100%;
+        display: inline-block;
+      }
+      .ct_content h3 {
+      }
+      .ct_1 {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .ct_1 img {
+        width: 100%;
+      }
+      .ct_2 {
+        border-top: 1px solid gray;
+        padding-top: 20px;
+      }
+      .ct_content .ct_2 {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .ct_content .ct_2 img {
+        width: 40%;
+        float: left;
+        margin-right: 10px;
+      }
+      .ct_content .ct_2 p {
+        width: 95%;
+        font-size: 14px;
+      }
+      @media only screen and (max-width: 1023px) {
+        .content_4 {
+          display: inline-block;
+        }
+        .ct_content {
+          width: 49%;
+          float: left;
+          text-align: justify;
+          margin-left: 2%;
+        }
+        .container :nth-child(1),
+        .container :nth-child(3) {
+          margin-left: 0;
+        }
+        .ct_content h3 {
+          font-size: 18px;
+          margin-bottom: 10px;
+          margin-top: 20px;
+        }
+        .ct_content .ct_1 {
+          display: inline-block;
+        }
+        .ct_1 img {
+          width: 40%;
+          float: left;
+          margin-right: 10px;
+        }
+        .ct_2 {
+          width: 100%;
+        }
+      }
+
+      /* -------------- begin container 2  */
+
+      .container2 {
+        /* max-width: 1100px; */
+        width: 100%;
+        display: block;
+        background-color: #ccc;
+        margin: 0 auto;
+      }
+      .content3 {
+        max-width: 1100px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      .content3 h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding: 20px 0;
+      }
+      .ct3 {
+        /* width: 1100px; */
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .ct3 li {
+        width: 260px;
+        height: 450px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        position: relative;
+        color: white;
+        overflow: hidden;
+        background-size: cover;
+        flex-direction: column;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .li1 {
+        background-image: url("ct51.webp");
+      }
+      .li2 {
+        background-image: url("ct52.webp");
+      }
+      .li3 {
+        background-image: url("ct53.webp");
+      }
+      .li4 {
+        background-image: url("ct54.webp");
+      }
+      .sp1 {
+        width: 96px;
+        font-size: 14px;
+        color: #000;
+        padding: 5px;
+        background-color: rgb(224, 224, 96);
+        position: absolute;
+        top: 0;
+        left: 32%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .ct3 li p {
+        position: absolute;
+        bottom: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 20px;
+        line-height: 1.3;
+      }
+      .sp2 {
+        position: absolute;
+        left: 100px;
+        top: 255px;
+        width: 60px;
+        height: 6px;
+        background: yellow;
+      }
+      @media only screen and (max-width: 830px) {
+        /* .container2{
+          display: inline-block;
+        }
+        .content3{
+          display: inline-block;
+        } */
+        /* .ct3 {
+            display: inline-block;
+          } */
+        .ct3 li:nth-child(1),
+        .ct3 li:nth-child(2),
+        .ct3 li:nth-child(3) {
+          width: 33%;
+          margin-left: 0.33%;
+          float: left;
+        }
+        .container2 .content3 ul li:first-child {
+          margin-left: 0px;
+        }
+        .ct3 li:last-child {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 666px) {
+        .ct3 {
+          display: inline-block;
+        }
+        .ct3 li:nth-child(1),
+        .ct3 li:nth-child(2) {
+          width: 49%;
+        }
+        .ct3 li:nth-child(3) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        /* .ct3 {
+          display: inline-block;
+        } */
+        .ct3 li:nth-child(1) {
+          width: 100%;
+        }
+        .ct3 li:nth-child(2) {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 1023px){
+        ul.hd_1 li a{
+          display: none;
+        }
+        /* .hd_1 li:last-child{
+          display: block;
+          float: left;
+        } */
+        .header img{
+          position: absolute;
+          left: 50%;
+        }
+        .l2{
+          position: absolute;
+          left: 30px;
+          font-size: 40px;
+        }
+      }
+      /* -----------begin header  */
+
+      .header {
+        max-width: 1100px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        margin: 0 auto;
+      }
+      .header img {
+        width: 15%;
+        float: left;
+      }
+      .hd_1 {
+        width: 80%;
+        display: flex;
+        /* text-align: center; */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+      }
+      .hd_1 a{
+        text-decoration: none;
+
+      }
+      .header a{
+        float: right;
+        /* position: absolute; */
+        /* top: 0;
+        right: 100%; */
+      }
+    </style>
+    <div class="header">
+      <img src="f1.png" alt="" />
+      <ul class="hd_1">
+        
+        <li class="l1"><a href="">Xuất bản</a></li>
+        <li class="l1"><a href="">Tác giả</a></li>
+        <li class="l1"><a href="">Kinh doanh</a></li>
+        <li class="l1"><a href="">Thể thao</a></li>
+        <li class="l1"><a href="">Công nghệ</a></li>
+        <li class="l1"><a href="">Sức khỏe</a></li>
+        <li class="l1"><a href="">Đời sống</a></li>
+        <li class="l1"><a href="">Giải trí</a></li>
+        <li class="l2">... </li>
+      </ul>
+      <a><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+
+    <div class="container">
+      <div class="main">
+        <div class="main_table">
+          <ul class="list_r">
+            <li>
+              <img src="a6.webp" alt="" />
+              <h3>Vị trí đặc biệt quan trọng của thành cổ Bắc Ninh xưa</h3>
+              <p>
+                Dưới triều Nguyễn, thành Bắc Ninh không chỉ là thành lũy quan
+                trọng đối với chính địa phương này mà còn giữ vị trí đặc biệt về
+                quân sự của đất nước khi nằm trong tuyến phòng thủ của các tỉnh
+                phía Bắc.
+              </p>
+              <h4>
+                Bắc Ninh - vùng đất 'Đi lên gặp tiến sĩ, đi xuống gặp quận công'
+              </h4>
+            </li>
+            <li>
+              <img src="a8.webp" alt="" />
+              <h3>2NSND Việt Anh, Bình Tinh tiễn biệt diễn viên Quý Bình</h3>
+            </li>
+            <li>
+              <img src="a8.webp" alt="" />
+              <h3>3Nottingham giành chiến thắng lịch sử trước Man City</h3>
+            </li>
+          </ul>
+        </div>
+        <div class="main_list">
+          <ul class="list_l">
+            <li>
+              <img src="tienl.webp" alt="" />
+              <p>Tiến Linh nguy cơ lỡ trận gặp Campuchia và Lào</p>
+            </li>
+            <li>
+              <img src="a2.webp" alt="" />
+              <p>Tiến Linh nguy cơ lỡ trận gặp Campuchia và Lào</p>
+            </li>
+            <li>
+              <img src="a3.webp" alt="" />
+              <p>Tiến Linh nguy cơ lỡ trận gặp Campuchia và Lào</p>
+            </li>
+            <li>
+              <img src="a4.webp" alt="" />
+              <p>Tiến Linh nguy cơ lỡ trận gặp Campuchia và Lào</p>
+            </li>
+            <li>
+              <img src="a5.webp" alt="" />
+              <p>Tiến Linh nguy cơ lỡ trận gặp Campuchia và Lào</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- /*------------------ begin table_section*/  -->
+      <section class="table_section">
+        <nav class="header_se">
+          <h3>BOOKS</h3>
+        </nav>
+        <div class="title_s">
+          <ul class="tt_main">
+            <li>
+              <img src="b1.webp" alt="" />
+              <p>
+                Dỡ bỏ tòa nhà 'Hàm cá mập', kiến trúc sư, chuyên gia về Hà Nội
+                nói gì?
+              </p>
+            </li>
+            <li>
+              <img src="b2.webp" alt="" />
+              <p>Lược sử nữ quyền</p>
+            </li>
+            <li>
+              <img src="b3.webp" alt="" />
+              <p>
+                Nếu không có đế quốc Ottoman, lịch sử thế giới có thể đã khác
+              </p>
+            </li>
+            <li>
+              <img src="b4.webp" alt="" />
+              <p>Cứ mơ và cứ yêu đi em</p>
+            </li>
+            <li>
+              <img src="b5.webp" alt="" />
+              <p>Cách tỷ phú vay tiền</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ----------end table_section -->
+
+      <div class="table3">
+        <h3>MULTIMEDIA</h3>
+        <ul class="tb3_mu">
+          <li>VIDEO</li>
+          <li>PODCAST</li>
+          <li>LONGFORM</li>
+          <li>STORY</li>
+          <li>QUIZZ</li>
+        </ul>
+        <div class="ct_mul">
+          <ul>
+            <li>
+              <img src="c1.webp" alt="" />
+              <h3>Bên trong resort 5 sao nơi tổ chức đám cưới của Salim</h3>
+              <p>
+                Địa điểm cặp đôi Salim - Hải Long lựa chọn tổ chức tiệc cưới là
+                một trong số khu nghỉ dưỡng khép kín và đắt đỏ bậc nhất Việt
+                Nam. Giá phòng lên đến 36,5 triệu đồng/đêm.
+              </p>
+            </li>
+            <li>
+              <img src="c2.webp" alt="" />
+              <h3>
+                Nữ tiếp viên hàng không gây chú ý khi diễu hành cổ phục ở TP.HCM
+              </h3>
+            </li>
+            <li>
+              <img src="c3.webp" alt="" />
+              <h3>Viktor Lê được bố mẹ đưa đi hội quân U22 Việt Nam</h3>
+            </li>
+            <li>
+              <img src="c4.gif" alt="" />
+              <h3>CĐV nổi giận với Hojlund</h3>
+            </li>
+            <li>
+              <img src="c5.webp" alt="" />
+              <h3>
+                Chợ, con trai và một ngày không du lịch của travel blogger
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ----------------------------begin ct4 -->
+
+      <!-- ------------   begin content_4 -->
+      <div class="content_4">
+        <ul class="ct_content">
+          <h3>CÔNG NGHỆ</h3>
+          <li class="ct_1">
+            <img src="e1.webp" alt="" />
+            <p>Intel có CEO mới</p>
+          </li>
+          <li class="ct_2">
+            <img src="e2.webp" alt="" />
+            <p>5 nâng cấp đáng chú ý chưa được đề cập trên iPhone 16e</p>
+          </li>
+          <li class="ct_2">
+            <img src="e3.webp" alt="" />
+            <p>AI mới 'tốt hơn DeepSeek' thực tế chỉ là sự cường điệu?</p>
+          </li>
+        </ul>
+
+        <ul class="ct_content">
+          <h3>CÔNG NGHỆ</h3>
+          <li class="ct_1">
+            <img src="e1.webp" alt="" />
+            <p>Intel có CEO mới</p>
+          </li>
+          <li class="ct_2">
+            <img src="e2.webp" alt="" />
+            <p>5 nâng cấp đáng chú ý chưa được đề cập trên iPhone 16e</p>
+          </li>
+          <li class="ct_2">
+            <img src="e3.webp" alt="" />
+            <p>AI mới 'tốt hơn DeepSeek' thực tế chỉ là sự cường điệu?</p>
+          </li>
+        </ul>
+
+        <ul class="ct_content">
+          <h3>CÔNG NGHỆ</h3>
+          <li class="ct_1">
+            <img src="e1.webp" alt="" />
+            <p>Intel có CEO mới</p>
+          </li>
+          <li class="ct_2">
+            <img src="e2.webp" alt="" />
+            <p>5 nâng cấp đáng chú ý chưa được đề cập trên iPhone 16e</p>
+          </li>
+          <li class="ct_2">
+            <img src="e3.webp" alt="" />
+            <p>AI mới 'tốt hơn DeepSeek' thực tế chỉ là sự cường điệu?</p>
+          </li>
+        </ul>
+
+        <ul class="ct_content">
+          <h3>CÔNG NGHỆ</h3>
+          <li class="ct_1">
+            <img src="e1.webp" alt="" />
+            <p>Intel có CEO mới</p>
+          </li>
+          <li class="ct_2">
+            <img src="e2.webp" alt="" />
+            <p>5 nâng cấp đáng chú ý chưa được đề cập trên iPhone 16e</p>
+          </li>
+          <li class="ct_2">
+            <img src="e3.webp" alt="" />
+            <p>AI mới 'tốt hơn DeepSeek' thực tế chỉ là sự cường điệu?</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- -----------------end content_4  -->
+    </div>
+    <!-- --------------------begin conten_3  -->
+    <div class="container2">
+      <div class="content3">
+        <h2>MAGAZINE</h2>
+        <ul class="ct3">
+          <li class="li1">
+            <span class="sp1">TL;DR</span>
+            <p>CHÂU ÂU BÀNG HOÀNG</p>
+            <span class="sp2"></span>
+          </li>
+          <li class="li2">
+            <span class="sp1">TL;DR</span>
+            <p>TÌNH THẾ UKRAINA SAU MÀN KHẨU CHIẾN TẠI NHÀ TRẮNG</p>
+            <span class="sp2"></span>
+          </li>
+          <li class="li3">
+            <span class="sp1">TL;DR</span>
+            <p>THẤY GÌ TẠI VỤ THANH THANH HUYỀN BỊ MẤT VALI TẠI ITALY</p>
+            <span class="sp2"></span>
+          </li>
+          <li class="li4">
+            <span class="sp1">STORY</span>
+            <p>ĐÊM DIỄN KHÓ TIN CỦA NỮ CHÍNH TRONG VỞ XIẾC GÂY SỐT Ở TP.HCM</p>
+            <span class="sp2"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ------------------end conten_3  -->
+  </body>
+</html>
