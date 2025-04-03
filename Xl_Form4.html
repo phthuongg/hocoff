@@ -12,52 +12,52 @@
             var a="";
             var b="";
             $("form#up").submit(function(){
-                var get1= $("input#up_mail").val();
-                var get2= $("input#up_pass").val();
-                var get3= $("input#up_pass_confirm").val();
-                var get4= $("input.check").is(":checked");
+                    var get1= $("input#up_mail").val();
+                    var get2= $("input#up_pass").val();
+                    var get3= $("input#up_pass_confirm").val();
+                    var get4= $("input.check").is(":checked");
 
-                var loi =0;
-                if(get1 == ""){
-                    $("p.mail_error").text("lỗi");
-                    loi = 1;
-                }
-                else{
-                    $("p.mail_error").text("");
-                }
-                if(get2 == ""){
-                    $("p.pass_error").text("lỗi");
-                    loi = 1;
-                }
-                else{
-                    $("p.pass_error").text("");
-                }
-                if(get3 == ""){
-                    $("p.confirm_error").text("lỗi");
-                    loi = 1;
-                }
-                else{
-                    $("p.confirm_error").text("");
-                }
-                if(get4 == false){
-                    $("p#agree").text("lỗi");
-                    loi = 1;
-                }
-                else{
-                    $("p#agree").text("");
-                }
+                    var loi =0;
+                    if(get1 == ""){
+                        $("p.mail_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.mail_error").text("");
+                    }
+                    if(get2 == ""){
+                        $("p.pass_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.pass_error").text("");
+                    }
+                    if(get3 == ""){
+                        $("p.confirm_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.confirm_error").text("");
+                    }
+                    if(get4 == false){
+                        $("p#agree").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p#agree").text("");
+                    }
 
-                if(get2 != get3 && get2 != "" && get3 != "" ){
-                    $("p.pass_error").text("2 pass khac nhau");
-                    $("p.confirm_error").text("2 pass khac nhau");
-                }
-                if(loi==0){
-                    alert("thanh cong");
-                    a = get1;
-                    b = get2;
-                }
+                    if(get2 != get3 && get2 != "" && get3 != "" ){
+                        $("p.pass_error").text("2 pass khac nhau");
+                        $("p.confirm_error").text("2 pass khac nhau");
+                    }
+                    if(loi==0){
+                        alert("thanh cong");
+                        a = get1;
+                        b = get2;
+                    }
 
-                return false;
+                    return false;
             })
             $("form#in").submit(function(){
                 var getE = $("input#in_mail").val();
