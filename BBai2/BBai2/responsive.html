@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- giup dien thoai nhan css ben trong the media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>24h.com.vn</title>
+    
+</head>
+<body>
+
+
+
+    <style type="text/css">
+   
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+  
+/*
+   - responsive web la 1 web co nhieu giao dien (hay noi cach khac viet css cho nhieu man hinh(pc,tablet,sm)
+
+    giao dien phone < 730 < giao dien 2 < 1023 < : giao dien pc va thu nho lai
+
+   - pc: -> giao dien pc : 0 -  vo cung
+   - tablet: -> giao dien : 0 - 992
+   - phone: 0-768
+
+   
+    - 1023 <: giao dien pc, giu nguyen va bop nho lai
+    - < 1023 : bien doi sang  giao dien 2 :tablet
+    - < 730: bien doi sang 3:  phone;
+
+    */
+    
+
+    /*man hinh chinh*/
+    /*0-vo cung*/
+
+    
+    
+   
+   /* ul.media_list li:first-child: chon the li dau tien
+    ul.media_list li:last-child: cuoi cung
+    ul.media_list li:nth-child(2): the thu 2
+    ul.media_list li:nth-child(2n + 1): le 
+    ul.media_list li:nth-child(2n + 2): chan*/
+    
+
+    
+    /*toa giao chinh hoan chinh*/
+/*    quy tac thu nho lai:*/
+
+    /*chuyen width the cha sang max-width va width:100%*/
+   
+   div.main{
+/*        kich thuoc toi da la 1100px/*/
+        max-width: 1100px; 
+
+/*        khi kéo vào thi  cai này chạy*/
+        width: 100%;
+       
+
+        padding: 30px; 
+        background-color: yellow;
+        display: block;
+        margin: 0 auto;
+    }
+
+   
+    div.main ul{
+        width: 100%;
+        display: inline-block;
+    }
+    div.main ul li{
+        width: 24%; 
+        float: left;
+        margin-left: 1.5%;
+        
+    }
+    div.main ul li:first-child{
+        width: 49%;
+        margin-left: 0;
+        
+    }
+    div.main ul li img{
+        width: 100%;
+    }
+
+         /*0-1023:  tablet*/ 
+        @media only screen and (max-width: 1023px) {
+            div.main ul li{
+                width: 49%;
+                margin-left: 0;
+            }
+            div.main ul li:first-child{
+                width: 100%;
+            }
+            ul.media_list li:nth-child(3),
+            ul.media_list li:nth-child(5){
+                margin-left: 2%;
+            }
+           
+        }   
+
+
+        /*0-748:  phone */
+        @media only screen and (max-width: 730px) {
+        /*css co tac dung trong này*/
+            div.main ul li{
+                width: 100%;
+            }
+            div.main ul li img{
+                width: 200px;
+                float: left;
+                margin-right: 10px;
+            }
+            div.main ul li:first-child img{
+                width: 100%;
+                margin-right:0
+            }
+            ul.media_list li:nth-child(3),
+            ul.media_list li:nth-child(5){
+                margin-left: 0;
+            }
+          
+        }
+    </style>
+
+ 
+
+    <div class="main">
+        <ul class="media_list">
+
+            <li>
+                <img src="https://static-images.vnncdn.net/files/publish/2023/9/23/hoang-thai-tu-nhat-ban-xem-tieu-ban-ca-bong-cong-nuong-duoc-tang-thu-bong-470.jpg">
+                <p>gười dân TP.HCM tiêm vaccine không cần đăng ký trước</p>
+            </li>
+            <li>
+                <img src="https://static-images.vnncdn.net/files/publish/2023/9/23/vi-sao-kiem-soat-ke-khai-tai-san-con-han-che-258.jpg">
+                <p>gười dân TP.HCM tiêm vaccine không cần đăng ký trước</p>
+            </li>
+            <li>
+                <img src="https://static-images.vnncdn.net/files/publish/2023/9/23/vi-sao-kiem-soat-ke-khai-tai-san-con-han-che-258.jpg">
+                <p>gười dân TP.HCM tiêm vaccine không cần đăng ký trước</p>
+            </li>
+            <li>    
+                <img src="https://static-images.vnncdn.net/files/publish/2023/9/23/vi-sao-kiem-soat-ke-khai-tai-san-con-han-che-258.jpg">
+                <p>gười dân TP.HCM tiêm vaccine không cần đăng ký trước</p>
+            </li>
+            <li>
+                <img src="https://static-images.vnncdn.net/files/publish/2023/9/23/vi-sao-kiem-soat-ke-khai-tai-san-con-han-che-258.jpg">
+                <p>gười dân TP.HCM tiêm vaccine không cần đăng ký trước</p>
+            </li>
+        </ul>
+    </div>
+
+    
+
+  
+</body>
+</html>

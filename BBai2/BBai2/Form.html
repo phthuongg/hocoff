@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div class="row">
+            <div class="col-xl-6">
+                <input type="text" placeholder="Full name">
+            </div>
+            <div class="col-xl-6">
+                <input type="text" placeholder="email address">
+            </div>
+            <div class="col-xl-12">
+                <textarea placeholder="your message"></textarea>
+            </div>
+            <div class="col-xl-12">
+                <button class="button-one">senmessage</button>
+            </div>
+        </div>
+    </form>
+    <style>
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f6f6fb;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .col-xl-6 {
+            /* flex: 1; */
+            width: 48%;
+        }
+
+        .col-xl-12 {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: none;
+        }
+
+        .button-one {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            background: linear-gradient(135deg, #6e46ff, #ff6be6);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>
