@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tạo mảng
+        // var obj2 = ['xe','phao','nha']
+        // console.log(obj2)
+
+        var obj1 ={}
+        obj1['demo1']=("thuong1")
+        obj1['demo2']=("thuong2")
+        obj1.demo3=("thuong3")
+        obj1.demo4=("thuong4")
+        // console.log(obj1)
+
+        var xx = JSON.stringify(obj1)
+        localStorage.setItem('Obj1',xx)
+    </script>
+</body>
+</html>

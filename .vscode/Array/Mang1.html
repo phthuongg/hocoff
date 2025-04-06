@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng 1</title>
+</head>
+<body>
+    <script>
+        var mang1 =  []; //hoac arry new()
+
+        mang1.push("nokia")
+        mang1.push("iphone" , "samsung")
+        mang1.push("xxx")
+
+        console.log(mang1);
+            // key: value
+            // 0:"iphone"
+            // 1:"nokia"
+            // 2:"samsung
+            // length:3
+
+            // length: cho biết mảng có 3 phân tử
+
+            //sau này muốn kiểm tra mảng có data khong thì
+            if(mang1.length > 0){
+                // console.log("co")
+            }
+
+            // key: tự động tao ra, bắt đầu bằng 0 va tang len, key < length 1 dvi
+
+            // cu pháp: lấy value trong mảng ra: tên-mang[key]
+            // vdu lấy samsung ra thi
+            // console.log(mang1[2])
+
+            // dùng for hiện thị từng value trong mảng ra
+
+            for(var i=0 ; i < mang1.length ; i++){
+                // console.log(mang1[i])
+
+                // ví dụ muouons dùng vòng 1 lây ra 1 cái key = 2 thi
+                if(i == 2){
+                    // console.log(mang1[i])
+                }
+                }
+
+            // vòng lặp MAP như for nhưng cách dùng khác nhau:
+            // vòng lặp này có 1 điểm là không cần đến i = 0 và length gì hết,
+            //có bnhieu value và key thì nó tự lấy ra hết
+
+            //value và key bên trong này cũng chính là value và key của mảng1
+
+            mang1.map(function(value, key){
+                // // lấy value ra
+                // console.log(value)
+
+                //lấy key ra
+                // console.log(key)
+
+                //tương tự for, muốn lấy 1 cái ra thôi, vdu
+                
+                if(key==2){
+                    // console.log(value)
+                }
+            })
+
+            //giờ tạo 1 mảng bằng số như sau
+            var mang2 = [];
+
+                for(var i=0 ; i< 11; i++){
+                    mang2.push(i);
+                }
+                // console.log(mang2)
+
+                // dung MAP tinh tong các sô trong mảng
+                s = 0;
+                mang2.map(function(value, key){
+                    s= s + value;
+                })
+                // console.log(s)
+
+
+                //phần tiếp theo là xử dụng localStorage
+                //localStorage là 1 bộ nhớ tạm, lưu trữ data ở dạng chuỗi và lưu trên trang web
+
+                //chỉ cần đưa data vào thì qua trang html khác có thể lấy ra dung
+
+
+                //và nó chỉ cho phép lưu trữ data o dạng chuỗi nên khi đưa arayy vào phải chuyển sang dạng chuỗi trc như sau:
+
+                //vdu dua mang2 ở trên vào thì:
+                // console.log(mang2)
+
+                // var xx = JSON.stringify(mang2)
+                // console.log(xx)
+
+                // localStorage.setItem("thuong", xx)
+
+                //nghĩa là đưa chuỗi xx vào localStorage bang tên demo
+                //chạy thử xem nó lưu trên web là ở đâu
+
+                //sau khi xem đã có thì thử qua trang khác lấy ra xem
+
+                var xx = localStorage.getItem("thuong")
+
+                //kiểm tra có hay k?
+                if(xx){
+                    console.log("có đây")
+                    console.log(xx);
+
+                    //JSON.parse: chuyển chuỗi về lại kiểu data cũ
+                    xx = JSON.parse(xx)
+
+                    console.log(xx)
+                }
+                
+
+
+    </script>
+</body>
+</html>

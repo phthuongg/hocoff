@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index1</title>
+</head>
+<body>
+    <script>
+        var mang1 = []
+
+        for(var i=1 ; i<=10 ; i++){
+            mang1.push(i);
+        }
+        console.log(mang1)
+
+        var xx = JSON.stringify(mang1)//chuyển sang dạng chuỗi để đưa vào localstorage
+        localStorage.setItem("M1", xx)//đưa vào luu trữ với tên M1 có các phần tử của mảng xx
+    </script>
+</body>
+</html>

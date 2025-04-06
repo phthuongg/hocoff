@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID3</title>
+</head>
+<body>
+    <script>
+        var xx = localStorage.getItem("M1")
+        if(xx){
+            console.log("có M1");
+            console.log("chuỗi :"+ xx);//vẫn ở dạng chuỗi
+
+            var manggoc =JSON.parse(xx)
+            console.log("Mảng :"+ manggoc);//đây là dạng mảng k còn dạng chuỗi
+        }else{
+            console.log("không có M1 trong localStorage!!!!")
+        }
+        
+        var mang2 = []
+        for(var i = 0; i<manggoc.length; i++){
+            mang2.push(manggoc[i]+10)
+        }
+        console.log(mang2)
+
+        const manggop = manggoc.concat(mang2);
+        console.log("mảng gộp của 2 mảng là: "+ manggop)
+
+        var s=0;
+        manggop.map(function(value,key){
+            s += value;
+        })
+        console.log("tổng mảng gộp = "+ s)
+
+        // var s=0;
+        // for(var i=0 ; i<manggop.length; i++){
+        //     s = s + manggop[i];
+        // }
+        // console.log("tổng mảng gộp = "+ s)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //trả về gia trị cũ
+        var objgoc = localStorage.getItem('Obj1')
+        objgoc = JSON.parse(objgoc);
+
+        //kiểm tra có giá trị không
+        // if(objgoc){
+        //     console.log("có")
+        //     console.log(objgoc)
+
+        //     objgoc = JSON.parse(objgoc)
+        //     console.log(objgoc)
+        // } else {
+        //     console.log("Không có dữ liệu Obj1 trong localStorage.");
+        // }
+
+        //kiểm tra có Obj1 trong local khong
+        if (Object.keys(objgoc).length > 0) {
+            // console.log("có")
+            //duyệt bằng map
+            Object.keys(objgoc).map(function(key, index) {
+                var value = Object[key]
+                console.log(key+ ": "+ objgoc[key])
+            })
+        }
+        
+        //thêm mảng vào object
+        // var mangnew = ['hoa','la','canh']
+        // objgoc['demonew']=mangnew
+        // console.log(objgoc)
+    </script>
+</body>
+
+</html>

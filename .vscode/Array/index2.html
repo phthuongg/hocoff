@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index2</title>
+</head>
+
+<body>
+    <script>
+        var yy = localStorage.getItem("M1")
+
+        if (yy) {
+            console.log("có M1")
+            console.log(yy) //yy vẫn là chuỗi
+
+            var mang1g = JSON.parse(yy); //chuyển yy thành mảng lại gán vào mang1 gốc
+            // console.log(yy)
+        }
+        mang1g.map(function (value, key) {
+            // console.log(key, value)
+            if (key == 8) {
+                console.log("số :" + value)
+            }
+        })
+
+
+        //Dùng hàm for
+        var mang1 = []
+        // for(var i = 0 ; i<length(mang1g); i++){ sai
+        for (var i = 0; i < mang1g.length; i++) {
+
+            // if(value(mang1g) <= 5){ sai
+            if (mang1g[i] <= 5) {
+
+                // mang2.push(value); sai
+                mang1.push(mang1g[i]);
+            }
+        }
+        console.log("dùng for để lọc ra: " + mang1)
+
+        //Dùng map
+        var mang2 = []
+        mang1g.map(function (value) {
+            if (value <= 5) {
+                mang2.push(value)
+            }
+        })
+        console.log("dùng hàm map lọc ra được: " + mang2)
+
+
+        //Dùng filter
+        //dùng filter phải gán 1 biến để nhận kq trả về. filter chỉ trả về 1 mảng mới, không làm thay đổi mảng gốc. 
+        var mang2filter = mang1g.filter(function (value) {
+            return value <= 5;
+        })
+        console.log("dùng filter lọc ra được: " + mang2filter)
+
+        var xx = JSON.stringify(mang2filter)
+        localStorage.setItem("M2FT", xx) //luu vào kho với key=M2FT
+
+
+
+        //         // Lưu trữ một item vào localStorage
+        // localStorage.setItem("username", "JohnDoe");
+
+        // // Lấy item từ localStorage
+        // var username = localStorage.getItem("username");
+        // console.log(username); // JohnDoe
+
+        // // Xóa item khỏi localStorage
+        // localStorage.removeItem("username");
+
+        // // Kiểm tra xem key có tồn tại trong localStorage không
+        // if(localStorage.getItem("username") === null) {
+        //     console.log("Không có 'username' trong localStorage");
+        // }
+
+        // // Xóa tất cả các mục trong localStorage
+        // localStorage.clear();
+
+        // // Kiểm tra số lượng mục trong localStorage
+        // console.log(localStorage.length); // Sẽ in ra 0 nếu đã xóa tất cả
+    </script>
+</body>
+
+</html>
