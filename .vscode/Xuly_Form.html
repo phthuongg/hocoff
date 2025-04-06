@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XU LY FORM</title>
+    <style type="text/css">
+      p {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function () {
+          var getValue1 = $("input.email").val();
+          var getValue2 = $("input#pass").val();
+
+          if (getValue1 == "") {
+            $("p.err1").text("vui long nhap");
+          } else {
+            $("p.err1").text("");
+          }
+
+          if (getValue2 == "") {
+            $("p.err2").text("vui long nhap");
+          } else {
+            $("p.err2").text("");
+          }
+
+          //neu ca 2 the nhap roi thi cho chay
+          if (getValue1 != "" && getValue2 != "") {
+            alert("ok");
+            return true;
+          }
+
+          return false;
+        });
+      });
+    </script>
+
+    <h1>Xu ly form</h1>
+
+    <form action="https://www.24h.com.vn/tin-tuc-trong-ngay-c46.html">
+      <label for="text">ten</label> <br>
+      <input type="text" name="" value="" class="email" />
+      <p class="err1"></p>
+
+      <label for="password">mat khau</label> <br>
+      <input type="password" name="" value="" id="pass" />
+      <p class="err2"></p>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

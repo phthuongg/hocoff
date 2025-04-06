@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F4</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a="";
+            var b="";
+            $("form#up").submit(function(){
+                    var get1= $("input#up_mail").val();
+                    var get2= $("input#up_pass").val();
+                    var get3= $("input#up_pass_confirm").val();
+                    var get4= $("input.check").is(":checked");
+
+                    var loi =0;
+                    if(get1 == ""){
+                        $("p.mail_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.mail_error").text("");
+                    }
+                    if(get2 == ""){
+                        $("p.pass_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.pass_error").text("");
+                    }
+                    if(get3 == ""){
+                        $("p.confirm_error").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p.confirm_error").text("");
+                    }
+                    if(get4 == false){
+                        $("p#agree").text("lỗi");
+                        loi = 1;
+                    }
+                    else{
+                        $("p#agree").text("");
+                    }
+
+                    if(get2 != get3 && get2 != "" && get3 != "" ){
+                        $("p.pass_error").text("2 pass khac nhau");
+                        $("p.confirm_error").text("2 pass khac nhau");
+                    }
+                    if(loi==0){
+                        alert("thanh cong");
+                        a = get1;
+                        b = get2;
+                    }
+
+                    return false;
+            })
+            $("form#in").submit(function(){
+                var getE = $("input#in_mail").val();
+                var getP = $("input#in_pass").val();
+                var loi =0;
+
+                if(getE == ""){
+                    $("p.enter_mail").text("loi");
+                    loi=1;
+                }else{
+                    $("p.enter_mail").text("");
+                }
+                if(getP == ""){
+                    $("p.enter_pass").text("loi");
+                    loi =1;
+                }else{
+                    $("p.enter_pass").text("");
+                }
+                
+                if(loi ==0){
+                    // alert("thanh cong");
+                    // return true;
+                    if(a==getE && b==getP){
+                        alert("login thanh công")
+                    }else{
+                        alert("login that bại")
+                    }
+                }
+                return false;
+            })
+        })
+    </script>
+
+    <div class="login">
+		<div class="container container-footer">
+			<div class="sign-in">
+				<span>SIGN IN</span>
+				<form id="in" action="home.html">
+					<input type="text" id="in_mail" name="" placeholder="Your Email...">
+                    <p class="enter_mail"></p>
+					<input type="password" id="in_pass" name="" placeholder="Your Password...">
+					<p class="enter_pass"></p>
+					<button type="submit">SIGN IN</button>
+				</form>
+			</div>
+			<div class="register">
+				<span>REGISTER</span>
+				<p id="success"></p>
+				<form id="up">
+					<input id="up_mail" type="text" name="" placeholder="Your Email...">
+					<p class="mail_error"></p>
+					<input id="up_pass" type="password" name="" placeholder="Your Password...">
+					<p class="pass_error"></p>
+					<input id="up_pass_confirm" type="password" name="" placeholder="Confirm Password...">
+					<p class="confirm_error"></p>
+					<input class="check" type="checkbox" name="">Sign up for exclusive updates, discounts, new arrivals, contents and more!
+					<p id="agree"></p>
+					<button class="register" type="submit">CREATE ACCOUNT</button>
+					<div class="policy">
+						<span class="policy">By clicking 'Create Account', you agree to our </span><a href="">Privecy policy</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+ 
+</body>
+</html>

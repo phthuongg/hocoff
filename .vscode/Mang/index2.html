@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index2</title>
+</head>
+<body>
+    <script>
+        var yy = localStorage.getItem("M1")
+
+        if(yy){
+            console.log("có M1")
+            console.log(yy)
+
+            yy = JSON.parse(yy);
+            // console.log(yy)
+            
+        }
+        yy.map(function(value,key){
+            console.log(key,value)
+            if(key==8){
+                console.log("số :"+ value)
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var a = "";
+        var b = "";
+        $("form.F1").submit(function () {
+          var getE = $("input#email").val();
+          var getP = $("input#pass").val();
+
+          var loi = 0;
+          if (getE == "") {
+            $("p.err1").text("loi");
+            loi = 1;
+          } else {
+            $("p.err1").text("");
+          }
+
+          if (getP == "") {
+            $("p.err2").text("loi");
+            loi = 1;
+          } else {
+            $("p.err2").text("");
+          }
+
+          if (loi == 0) {
+            alert("thanh cong");
+            a = getE;
+            b = getP;
+          }else{
+            alert("that bai")
+          }
+
+          return false;
+        });
+
+        $("form.F2").submit(function () {
+          alert("email" + a);
+          alert("pass" + b);
+          return false;
+        });
+      });
+    </script>
+
+    <form class="F1">
+      <input type="email" id="email" /><br />
+      <p class="err1"></p>
+      <input type="password" id="pass" /><br />
+      <p class="err2"></p>
+      <button>Gui1</button> <br /><br />
+    </form>
+
+    <form action="" class="F2">
+      <button>Gui2</button>
+    </form>
+  </body>
+</html>
