@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var objgoc = localStorage.getItem('Obj2new')
+        if(Object.keys(objgoc).length > 0){
+            objgoc =JSON.parse(objgoc);
+            console.log(objgoc)
+
+            Object.keys(objgoc).map(function(key, index){
+                console.log(key, objgoc[key]);
+            })
+        }else{
+            console.log("khong co du lieu trong localStorage!!!")
+        }
+    </script>
+</body>
+</html>

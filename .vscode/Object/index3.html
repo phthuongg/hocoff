@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var objgoc = localStorage.getItem('Obj2')
+        //kiểm tra có giá trị không
+        if (Object.keys(objgoc).length > 0) {
+            objgoc = JSON.parse(objgoc)
+            console.log(objgoc)
+
+            // console.log(objgoc['objcon']['demo6'])
+            // console.log(objgoc['objcon'])
+
+            // Object.keys(objgoc).map(function(key, index){
+            //     console.log(key +": "+ objgoc[key])
+            //     // console.log(objgoc['objcon']);
+            // })
+            Object.keys(objgoc).map(function (key, index) {
+                console.log(key , objgoc[key]);
+                // console.log(key + ": " + JSON.stringify(objgoc[key]));
+            });
+
+            delete objgoc['demo3'];
+            console.log("Object sau khi xoá:", objgoc);
+
+            var xx= JSON.stringify(objgoc);
+            localStorage.setItem('Obj2new',xx);
+
+        } else {
+            console.log("Không có dữ liệu trong localStorage!!!");
+        }
+    </script>
+</body>
+
+</html>

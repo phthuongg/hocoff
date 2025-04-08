@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index7</title>
+</head>
+<body>
+    <script>
+        var objgoc = localStorage.getItem('Obj5new')
+        objgoc = JSON.parse(objgoc)
+        if(Object.keys(objgoc).length>0){
+            console.log("có dl");
+            console.log(objgoc);
+
+            var objmoi ={};
+            for(var i=11; i<=20; i++){
+                objmoi[i]=i;
+            }
+        }
+        console.log(objmoi);
+
+        var objtong={...objgoc,...objmoi};
+        console.log(objtong)
+
+        var s=0;
+        Object.keys(objtong).map(function(key){
+            s=s + Number(objtong[key]);
+        })
+
+        // var k=Object.keys(objtong);
+        // for( var i=0; i<k.length; i++){
+        //     var key= k[i];
+        //     s=s+Number(objtong[key]);
+        // }
+        
+
+        // for (const key in objtong) {
+        //     s= s+Number(objtong[key])
+        // }
+        console.log(s);
+    </script>
+</body>
+</html>

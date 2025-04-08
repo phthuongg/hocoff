@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index6</title>
+</head>
+
+<body>
+    <script>
+        var objgoc = localStorage.getItem('Obj5')
+        objgoc = JSON.parse(objgoc)
+        // console.log(objgoc)
+        Object.keys(objgoc).map(function (key, index) {
+            if (key == 9) {
+                // console.log(objgoc[key])
+            }
+        })
+        var objmoi = {};
+        var keys = Object.keys(objgoc)
+        // console.log(keys)
+        for (var i = 0; i < keys.length; i++) {
+            var key = keys[i]; //key theo dạng string
+            if (Number(key) <= 5) {
+                objmoi[key] = objgoc[key];
+            }
+        }
+
+        // var objmoi = {};
+        // for (var key in objgoc) {
+        //     if (Number(key) <= 5) {
+        //         objmoi[key] = objgoc[key];
+        //     }
+        // }
+
+        // Object.keys(objgoc).map(function (key) {
+        //     if (Number(key) <= 5) {
+        //         objmoi[key] = objgoc[key]
+        //     }
+        // })
+        console.log("obj mới là : ", objmoi);
+        localStorage.setItem('Obj5new', JSON.stringify(objmoi))
+    </script>
+</body>
+
+</html>

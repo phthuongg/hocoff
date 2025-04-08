@@ -29,10 +29,16 @@
             // console.log("có")
             //duyệt bằng map
             Object.keys(objgoc).map(function(key, index) {
-                var value = Object[key]
                 console.log(key+ ": "+ objgoc[key])
             })
         }
+        objgoc['objcon'] = {
+            demo5: "thuong5",
+            demo6:"thuong6"
+        }
+        var xx = JSON.stringify(objgoc)
+        localStorage.setItem('Obj2',xx)
+
         
         //thêm mảng vào object
         // var mangnew = ['hoa','la','canh']
