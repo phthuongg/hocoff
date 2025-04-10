@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hien thi Obj trong TB</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var objgoc = localStorage.getItem('objcha');
+            if (objgoc) {
+                // console.log(objgoc);
+
+                objgoc = JSON.parse(objgoc);
+                // console.log("sau khi json", objgoc)
+
+                var xx = "";
+                Object.keys(objgoc).map((key, index) => {
+                    // console.log(objgoc[key]['xx'])
+                    xx += "<tr >" +
+                        "<td>" + objgoc[key]['xx']+ 
+                        "<td>" + objgoc[key]['yy']+ 
+                        "</tr> ";
+                })
+                console.log(xx)
+                $("tbody").append(xx);
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</body>
+
+</html>
